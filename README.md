@@ -1,47 +1,42 @@
-# mySkill
+# mySkill 🧰
 
-Personal skill repository for OpenCode - a collection of specialized skills to extend Claude Code's capabilities.
+我自己在用的 Skill 仓库，记录已经实际使用和验证过的工作流。
 
-## Repository Structure
+## 📦 现有 Skills
 
-```
+| Skill | 用途 |
+|-------|------|
+| [upstream-imagegen](dev-tools/upstream-imagegen/) | 复用 Codex/CC Switch 当前中转站，通过 `/images/generations` 生成并保存图片 |
+| [quick-get](learning/quick-get/) | 快速整理一份中文技术概念文档，包含对比、项目结构和代码示例 |
+| [code-learning-generator](learning/code-learning-generator/) | 把技术文档转换成答案版与练习版代码项目 |
+| [skill-creator](skill-creator/) | 创建、校验和打包新的 Skill |
+
+## 📁 目录
+
+```text
 mySkill/
-├── skill-creator                  # 创建新 skill 的指南模板
-├── learning/                      # 学习相关技能
-│   ├── quick-get                 # 快速生成技术文档
-│   └── code-learning-generator   # 生成代码学习练习项目
-├── dev-tools/                    # (规划中) 开发工具类技能
-├── productivity/                 # (规划中) 效率提升类技能
-├── security/                     # (规划中) 安全审计类技能
-└── design/                        # (规划中) 设计类技能
+├── dev-tools/
+│   └── upstream-imagegen/
+├── learning/
+│   ├── quick-get/
+│   └── code-learning-generator/
+└── skill-creator/
 ```
 
-## Available Skills
+## 🚀 使用
 
-| Skill | Description |
-|-------|-------------|
-| [skill-creator](skill-creator/) | 创建新 skill 的指南模板，包含目录结构、工作流程和最佳实践 |
-| [quick-get](learning/quick-get/) | 快速生成简洁的技术文档，涵盖概念解析、对比分析、完整项目结构示例和代码实现 |
-| [code-learning-generator](learning/code-learning-generator/) | 从技术文档生成双文件结构的代码学习仓库，包含答案版(template) 和练习版(workspace) |
+每个 Skill 的具体触发条件和使用方式都写在对应的 `SKILL.md` 中。
 
-### dev-tools/ - 开发工具类技能
+以 Codex 为例，将需要的 Skill 目录复制到：
 
-(待添加...)
+```text
+~/.codex/skills/
+```
 
-### productivity/ - 效率提升类技能
+重新打开会话后即可调用，例如：
 
-(待添加...)
+```text
+使用 $upstream-imagegen 生成一张宣传图
+```
 
-### security/ - 安全审计类技能
-
-(待添加...)
-
-### design/ - 设计类技能
-
-(待添加...)
-
----
-
-## Usage
-
-这些技能可以通过 OpenCode 的 skill 工具加载使用。详情请参考各 skill 目录下的 SKILL.md 文件。
+Windows、Linux 和 CC Switch 的详细配置见 [upstream-imagegen 跨平台说明](dev-tools/upstream-imagegen/references/platform-setup.md)。
