@@ -1,0 +1,4 @@
+interface:
+  display_name: "Upstream Image Generator"
+  short_description: "Generate images through upstream compatible APIs"
+  default_prompt: "Use $upstream-imagegen to generate an image through my active upstream provider and save it locally."
